@@ -61,3 +61,11 @@
   background-color: #dc3545;
   border-color: #dc3545;
 }
+
+.activeRoute {
+  color: #0d6efd;
+}
+
+.route {
+  color: #000000;
+}

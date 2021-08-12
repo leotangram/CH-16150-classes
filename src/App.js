@@ -1,37 +1,52 @@
-import { useState } from "react";
+import React from "react";
 import "./App.css";
+import Router from "./router/Router";
+
+// const urlPath = "https://pokeapi.co/api/v2/";
 
 const App = () => {
-  const [counter, setCounter] = useState(0);
+  // const [number, setNumber] = useState(0);
+  // const [characters, setCharacters] = useState([]);
+  // const [pokemons, setPokemons] = useState([]);
+  // const [limit, setLimit] = useState(1);
 
-  const addCounter = () => setCounter(counter + 1);
+  // useEffect(() => {
+  //   if (number < 3 && number > 0) {
+  //     fetch("https://rickandmortyapi.com/api/character")
+  //       .then((response) => response.json())
+  //       .then((data) => setCharacters(data.results));
+  //   }
+  // }, [number]);
 
-  const subsCounter = () => setCounter(counter - 1);
+  // useEffect(() => {
+  //   fetch(`${urlPath}pokemon?limit=${limit}`)
+  //     .then((response) => response.json())
+  //     .then((data) => setPokemons(data.results))
+  //     .catch((error) => console.log("error", error));
+  // }, [limit]);
+
+  // const handleChangeLimit = (event) => {
+  //   setLimit(event.target.value);
+  // };
+
+  // const handleNumer = () => setNumber(number - 1);
 
   return (
     <div className="app-container">
-      <div className="card" style={{ width: "18rem" }}>
-        <div class="card-body">
-          <h5 class="card-title">Counter</h5>
-          <div className="buttons-container">
-            <button
-              type="button"
-              className="button substract-button"
-              onClick={subsCounter}
-            >
-              -
-            </button>
-            <span className="counter">{counter}</span>
-            <button
-              type="button"
-              className="button add-button"
-              onClick={addCounter}
-            >
-              +
-            </button>
-          </div>
-        </div>
-      </div>
+      <Router />
+      {/* <input type="number" value={limit} onChange={handleChangeLimit} />
+      <ul>
+        {pokemons.map(({ name }) => (
+          <li key={name}>{name}</li>
+        ))}
+      </ul> */}
+      {/* <button type="button" onClick={handleNumer}>
+        Restar
+      </button>
+      <h1>{number}</h1>
+      <button type="button" onClick={() => setNumber(number + 1)}>
+        Sumar
+      </button> */}
     </div>
   );
 };
