@@ -11,7 +11,7 @@ const Counter = () => {
   return (
     <div className="card" style={{ width: "18rem" }}>
       <div className="card-body">
-        <h5 class="card-title">Counter</h5>
+        <h5 className="card-title">Counter</h5>
         <div className="buttons-container">
           <Button action={subsCounter} text="-" />
           <span className="counter">{counter}</span>
