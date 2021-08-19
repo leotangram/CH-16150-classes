@@ -1,11 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import "./App.css";
-import Events from "./components/Events";
+import Component1 from "./components/Component1";
+import { CartContext } from "./context/cartContext";
+import { ThemeProvider } from "./context/themeContext";
+import Router from "./router/Router";
 
 const App = () => {
+  const [cart, setCart] = useState([]);
+
   return (
     <div className="app-container">
-      <Events />
+      <ThemeProvider>
+        <CartContext.Provider value={cart}>
+          <Router />
+          <Component1 />
+        </CartContext.Provider>
+      </ThemeProvider>
     </div>
   );
 };
