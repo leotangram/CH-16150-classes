@@ -69,3 +69,7 @@
 .route {
   color: #000000;
 }
+
+.iconButton {
+  cursor: pointer;
+}
