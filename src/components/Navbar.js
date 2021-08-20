@@ -25,6 +25,11 @@ const Navbar = () => {
             Categories
           </NavLink>
         </li>
+        <li>
+          <NavLink activeClassName="activeRoute" to="/products">
+            Products
+          </NavLink>
+        </li>
       </ul>
     </nav>
   );
