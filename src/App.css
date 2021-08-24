@@ -73,3 +73,7 @@
 .iconButton {
   cursor: pointer;
 }
+
+.green-text {
+  color: green;
+}
