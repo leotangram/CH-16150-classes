@@ -70,3 +70,5 @@ const ItemList = () => {
 export default ItemList;
 
 // https://firebase.googleblog.com/2021/07/introducing-the-new-firebase-js-sdk.html
+
+// https://firebase.google.com/docs/web/setup?hl=es&sdk_version=v9#add-sdks-initialize
