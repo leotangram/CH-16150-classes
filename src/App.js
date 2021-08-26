@@ -12,7 +12,7 @@ const App = () => {
     <div className="app-container">
       <ThemeProvider>
         <CartContext.Provider value={cart}>
-          <Component1 />
+          <Router />
         </CartContext.Provider>
       </ThemeProvider>
     </div>
