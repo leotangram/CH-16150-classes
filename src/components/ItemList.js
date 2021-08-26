@@ -27,19 +27,15 @@ const ItemList = () => {
         if (querySnapshot.size === 0) {
           console.log("No items");
         }
-        setItems(querySnapshot.docs.map((document) => document.data()));
+        setItems(
+          querySnapshot.docs.map((document) => ({
+            id: document.id,
+            ...document.data(),
+          }))
+        );
       })
       .catch((error) => console.log(error))
       .finally(() => setLoading(false));
-
-    // Call to document
-    currentItem.get().then((document) => {
-      if (!document.exists) {
-        console.log("No item");
-        return;
-      }
-      setItem({ id: document.id, ...document.data() });
-    });
 
     // Call with filters
     highPrice
@@ -55,14 +51,14 @@ const ItemList = () => {
   return (
     <div>
       {loading && <h1>Loading...</h1>}
-      {/* <ul>
-        {items.map(({ item, quantity }) => (
+      <ul>
+        {items.map((item) => (
           <li key={item.id}>
-            {item.name} - catidad: {quantity}
+            {item.title} - catidad: {item.stock}
             <Link to={`/product/${item.id}`}>Go to detail</Link>
           </li>
         ))}
-      </ul> */}
+      </ul>
     </div>
   );
 };
