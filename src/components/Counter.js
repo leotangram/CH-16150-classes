@@ -1,12 +1,16 @@
-import React, { useState } from "react";
+import React from "react";
 import Button from "./Button";
 
-const Counter = () => {
-  const [counter, setCounter] = useState(0);
+const Counter = ({ counter, from, setCounter, to }) => {
+  const addCounter = () => {
+    if (to === counter) return;
+    setCounter(counter + 1);
+  };
 
-  const addCounter = () => setCounter(counter + 1);
-
-  const subsCounter = () => setCounter(counter - 1);
+  const subsCounter = () => {
+    if (from === counter) return;
+    setCounter(counter - 1);
+  };
 
   return (
     <div className="card" style={{ width: "18rem" }}>
